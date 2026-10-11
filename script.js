@@ -3,7 +3,7 @@
 //@description  为 digdig.io 的文本汉化
 //@author       null
 //@namespace    https://github.com/hya21
-//@version      0.1
+//@version      0.2.1
 //@icon         https://digdig.io/favicon-32x32.png
 //@match        http*://*.digdig.io/*
 //@grant        none
