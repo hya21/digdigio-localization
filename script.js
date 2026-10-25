@@ -10,8 +10,8 @@
 //@match        http*://*.digdig.io/*
 //@grant        none
 //@supportURL
-//@downloadURL
 //@updateURL
+//@downloadURL
 //==/UserScript==
 (function() {
 'use strict';
