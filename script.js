@@ -9,9 +9,9 @@
 //@icon         https://digdig.io/favicon-32x32.png
 //@match        http*://*.digdig.io/*
 //@grant        none
-//@supportURL
-//@updateURL
-//@downloadURL
+//@supportURL   https://github.com/hya21/digdigio-localization/issues
+//@updateURL    https://github.com/hya21/digdigio-localization/raw/refs/heads/main/meta.js
+//@downloadURL  https://github.com/hya21/digdigio-localization/raw/refs/heads/main/script.js
 //==/UserScript==
 (function() {
 'use strict';
