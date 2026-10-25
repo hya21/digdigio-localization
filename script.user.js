@@ -10,8 +10,8 @@
 //@match        http*://*.digdig.io/*
 //@grant        none
 //@supportURL   https://github.com/hya21/digdigio-localization/issues
-//@updateURL    https://github.com/hya21/digdigio-localization/raw/refs/heads/main/meta.js
-//@downloadURL  https://github.com/hya21/digdigio-localization/raw/refs/heads/main/script.js
+//@updateURL    https://github.com/hya21/digdigio-localization/raw/refs/heads/main/script.meta.js
+//@downloadURL  https://github.com/hya21/digdigio-localization/raw/refs/heads/main/script.user.js
 //==/UserScript==
 (function() {
 'use strict';
