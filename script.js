@@ -16,7 +16,6 @@
 (function() {
 'use strict';
 
-//定义翻译对照表
 const map={
 	"Loading...":"加载中...",
 	"Loading..":"加载中..",
@@ -100,7 +99,6 @@ const calc=(text,x,y,maxWidth)=>{
 		return [text,x,y,maxWidth];
 	};
 };
-//获取fillText和strokeText方法，修改并覆盖
 const ctxProto=Object.getPrototypeOf(ctx);
 const origFillText=ctxProto.fillText;
 const origStrokeText=ctxProto.strokeText;
