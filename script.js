@@ -5,7 +5,7 @@
 //@description:zh-CN  为 digdig.io 的文本汉化
 //@author       null(hya21)
 //@namespace    https://github.com/hya21
-//@version      0.2.1
+//@version      0.3.0-261025 //修改映射表结构，支持多语言、动态文本
 //@icon         https://digdig.io/favicon-32x32.png
 //@match        http*://*.digdig.io/*
 //@grant        none
