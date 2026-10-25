@@ -16,7 +16,10 @@
 (function() {
 'use strict';
 
-const map={
+const langs={
+	"zh-CN":[
+		{ get:(c,t)=>c.map[t], map:(()=>{
+			const map={
 	"Loading...":"加载中...",
 	"Loading..":"加载中..",
 
@@ -86,18 +89,41 @@ const map={
 	"Continue":"继续",
 	"(or press enter)":"或 Enter",
 	"Stats":["统计"],
+			};
+			for(const i in map){
+				if(!Array.isArray(map[i]))map[i]=[map[i],0];
+			};
+			return map;
+		})() },
+		{ get:(c,t)=>{
+			const entry=c.map[t.slice(-6)];
+			return entry&&[t.slice(0,-entry[0].length)+entry[1],entry[2]];
+		},map:{
+	"iggers":[" Diggers","名挖掘者",0],
+	"online":[" players online","名玩家联机",0],
+		}},
+		{ get:(c,t)=>{
+			const entry=c.map[t.slice(0,10)];
+			return entry&&[entry[1]+t.slice(entry[0].length),entry[2]];
+		},map:{
+	"Max Points":["Max Points","最高分数"],
+	"Time Alive":["Time Alive","生存时间"],
+	"Diggers de":["Digger destoryed","消灭的挖掘者"],
+		}},
+	],
 };
-for(const i in map){
-	if(typeof map[i]==="string")map[i]=[map[i],0];
-};
+const maps=langs[navigator.language];
+
 const ctx=document.querySelector("canvas").getContext("2d");
 const calc=(text,x,y,maxWidth)=>{
-	if(map[text]){
-		map[text][1]??=(ctx.measureText(map[text][0]).width-ctx.measureText(text).width)/2;
-		return [map[text][0],x+map[text][1],y,maxWidth];
-	}else{
-		return [text,x,y,maxWidth];
+	for(const config of maps){
+		const entry=config.get(config,text);
+		if(entry){
+			entry[1]??=(ctx.measureText(entry[0]).width-ctx.measureText(text).width)/2;
+			return [entry[0],x+entry[1],y,maxWidth];
+		};
 	};
+	return [text,x,y,maxWidth];
 };
 const ctxProto=Object.getPrototypeOf(ctx);
 const origFillText=ctxProto.fillText;
