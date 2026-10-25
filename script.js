@@ -3,7 +3,7 @@
 //@name:zh-CN   digdig.io 汉化
 //@description  Localize text for digdig.io
 //@description:zh-CN  为 digdig.io 的文本汉化
-//@author       null
+//@author       null(hya21)
 //@namespace    https://github.com/hya21
 //@version      0.2.1
 //@icon         https://digdig.io/favicon-32x32.png
