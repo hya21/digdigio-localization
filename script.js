@@ -1,6 +1,8 @@
 //==UserScript==
-//@name         digdig.io 汉化
-//@description  为 digdig.io 的文本汉化
+//@name         digdig.io Localization
+//@name:zh-CN   digdig.io 汉化
+//@description  Localize text for digdig.io
+//@description:zh-CN  为 digdig.io 的文本汉化
 //@author       null
 //@namespace    https://github.com/hya21
 //@version      0.2.1
